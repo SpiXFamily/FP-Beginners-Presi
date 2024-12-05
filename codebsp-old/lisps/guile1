@@ -1,0 +1,8 @@
+#!/usr/bin/env guile -s
+!#
+(display "Hallo Guile")
+(newline)
+(define (factorial n))
+	(if (zero? n) 1 (* n (factorial (- n 1)))))
+	(factorial 10)
+(display n)

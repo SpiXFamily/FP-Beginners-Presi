@@ -1,0 +1,2 @@
+- https://xpqz.github.io/learnapl/intro.html
+- https://en.wikipedia.org/wiki/APL_(programming_language)

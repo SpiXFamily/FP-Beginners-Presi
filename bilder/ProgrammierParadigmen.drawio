@@ -1,0 +1,40 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="1392" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-12" value="deklarative Programmierung" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="360" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-13" value="Baue mir ein Vogelhaus. HIer hast du die Werkzeige Hammer und Nagel. und als Bau baterial Holz. Hier gebe ich dir das Ergbnis wi es aussehen soll." style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="vjsUgd1pbUEOTmnFiNiq-12">
+          <mxGeometry x="20" y="120" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-14" value="Compiler/Interpreter" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="vjsUgd1pbUEOTmnFiNiq-12">
+          <mxGeometry x="180" y="270" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-19" value="Baut nach&lt;div&gt;dem Aufgezeigten Erbenis&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="vjsUgd1pbUEOTmnFiNiq-12">
+          <mxGeometry x="210" y="130" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="vjsUgd1pbUEOTmnFiNiq-12">
+          <mxGeometry x="50" y="270" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-24" value="imperative Programmierung" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="120" width="360" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-26" value="Compiler/Interpreter" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="vjsUgd1pbUEOTmnFiNiq-24">
+          <mxGeometry x="165" y="270" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-27" value="Baut nach&amp;nbsp;&lt;div&gt;der Instruktion&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" vertex="1" parent="vjsUgd1pbUEOTmnFiNiq-24">
+          <mxGeometry x="200" y="135" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-11" value="Nehme Hammer und Nagel. Gehe 2m zur seite. Nehme das Holz. Tuhe Nagel auf das Holz. Schlage nagel auf das Holz mit den Hammer...&lt;div&gt;... stoppe nun nach...&lt;/div&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="vjsUgd1pbUEOTmnFiNiq-24">
+          <mxGeometry x="40" y="110" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="vjsUgd1pbUEOTmnFiNiq-24">
+          <mxGeometry x="75" y="270" width="30" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
