@@ -84,7 +84,7 @@
 \begin{frame}%[plain]
     \maketitle
     \centering
- \includegraphics[scale=0.15]{bilder/hsh-logo.jpg}[h]
+ %\includegraphics[scale=0.15]{bilder/hsh-logo.jpg}[h]
    \date{09.12.2024}
 
 \end{frame}
@@ -98,28 +98,25 @@
 \begin{frame}
 \begin{itemize}
 \item Was ist ein Funktionale Programmierung?
-\item Historische Entwicklung und Ursprung.
-\item Unterschiede zur imperativen Programmierung
+\item Ursprung
+\item Unterschiede zur imperativen Programierung
+\item Historische Entwicklung
 \item Wichtige Konzepte: Funktionen als erste Klasse, Unveränderlichkeit und Rekursion
 \item Praktische Beispiele
-\item Ziel der Präsentation: Verständnis der Grundlagen und praktischen Anwendungen der funktionalen Programmierung.
-
+\item Ziel der Präsentation: grundlägige Verständnis  zur funktionalen Programmierung
 \end{itemize}
 \end{frame}
 
-
 \section{Herkunft der Funktionalen Programmierung}
 \begin{frame}
-
 	\begin{itemize}
 		\item Lambda Kalkül (1930): Alonzo Church (14.06.1903 - 11.08.1995)
 		\item Vor Maschinen, die solchen Code ausführen konnten, gab es bereits Ansätze dazu.
             \item Typen Theorie
 	\end{itemize}
-
 \end{frame}
 
-\section{Programmier Paradigmen Übersicht}
+\section{Programmier Paradigmen}
 \begin{frame}
 	\begin{figure}
 	    \centering
@@ -140,15 +137,15 @@
 \begin{frame}{Deklaritive und Imperativen Programmiereung}
 \centering
 \includegraphics[scale=0.38]{bilder/ProgrammierParadigmen.drawio.png}
-
+\textmd{Thanh Viet Nguyen CCBYSA 4.0}
 \end{frame}
 
 \begin{frame}
-
-    \url{https://xkcd.com/435/}
+	\centering
+	\includegraphics[scale=0.35]{bilder/purity.png}
+    \textmd{\url{https://xkcd.com/435/}}
 \end{frame}
 
-\subsection{Lambda Kalkül}
 \begin{frame}
 	\begin{itemize}
  %alonzo church
@@ -158,29 +155,28 @@
 	%$"quadrat_summe"(x_y) = x^2 + y^2$ akk
 \end{frame}
 
-\begin{frame}[Turing Vollstäntdigkeit]
-
-\textmd{Turing Machine: Ein theoretisches Modell, das als Grundlage für die Berechenbarkeit dient. Es besteht aus einem unendlichen Band, einem Lese-/Schreibkopf und einer endlichen Zustandsmenge.}
-
-\textmdE{in System ist Turing-vollständig, wenn es in der Lage ist, jede berechenbare Funktion auszuführen, die ein Turing-Maschine ausführen kann.}
-
+\begin{frame}
+	\section{Historie}
+\frametitle{Lisp Maschinen}
+	\begin{itemize}
+            \item 1960er
+            \item Zweck rforschung von Künstlicher Intelligenz
+            \includegraphics[scale=0.1]{bilder/lispm.jpg}
+            \includegraphics[scale=0.1]{bilder/lispm1.jpg}
+            \includegraphics[scale=0.1]{bilder/symblics.jpeg}
+	\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Lisp Maschinen}
-	\begin{itemize}
-            \item 1960er
-            \item Erforschung von Künstlicher Intelligenz
-	\end{itemize}
-
+	content...
 \end{frame}
 
 \begin{frame}
 \frametitle{Lisp Dialekte}
 	\begin{figure}
 	    \centering
-	    \includegraphics[width=0.7\linewidth]{lisphis.png}
+	    \includegraphics[width=0.7\linewidth]{bilder/lisphis.png}
             \textmd{ \tiny \url{https://en.wikipedia.org/wiki/Lisp_(programming_language)}}
 	    %\caption{Enter Caption}
 	    %\label{fig:enter-label}
@@ -301,12 +297,11 @@
 		\hline
             Mehr Speichersicherheit  & meist Speicher intensiver bei der Laufzeit  \\
 		\hline
-    Code ist in der Regel lesbarer und Kürzer & Lesbarkeit \neq Verständlich \\
+    Code ist in der Regel lesbarer und Kürzer & Lesbarkeit $\neq$ Verständlich \\
             Höhere Abstraktion & \\
 		\hline
 
  \end{tabular}
-
 \end{frame}
 
 \section{Anwendungsgebiete}
@@ -338,7 +333,7 @@
 		\item Guix: GNU/Linux Distro, welches mit Guile Scheme Dialekt Konfiguriert wird
 		\item Emacs: Ein Texteditor mit vielen erweiterungen, welches mit Lisp Dialekt (Elisp)
 		\item Debian GNU/Linux verwendung von OCAML für Reproduzierbare Checks
-            \item Code als Basis für Infrastrukturen
+        \item Code als Basis für Infrastrukturen
 \end{itemize}
 
 \end{frame}
@@ -360,9 +355,9 @@
 		\item Grundverständnis zur Funktionalen Programmiereung
 		\item Lambda Kalkulus etwas kennen gelernt
 		\item Schwächen und Stärken der Funktionalen Programmierung
-            \item Anwendungsgebiete die von FP geführt werden
-            \item Wird in der Zukunft häufiger verwendet durch Entwickeln mit KI und Quantencomputer
-            \item FP ist nicht die Lösung für alle Probleme in der Softwareentwicklung.
+         \item Anwendungsgebiete die von FP geführt werden
+         \item Wird in der Zukunft häufiger verwendet durch Entwickeln mit KI und Quantencomputer
+         \item FP ist nicht die Lösung für alle Probleme in der Softwareentwicklung.
             %\item \textmd{$\neg \forall x \, (\text{Lösung}(x) \rightarrow \text{funktionale Programmierung}(x)) \land \exists y \, (\text{optimale Lösung}(y) \land \text{Problem}(y) \land \text{funktionale Programmierung}(y))$}
             %\item $\neg \forall \times ( Lösung(x) \rightarrow y(\text{FunktionaleProgrammierung}(x)) \and \exists y(\text{OpitimaleLösung}(y)) \and \text{Problem}(y) \and \text{FunktionaleProgrammierung}(y)) $ .
 
