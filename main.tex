@@ -45,6 +45,30 @@
 \usepackage{textpos}
 \usepackage{tikz}
 \usepackage{etoolbox}
+\usepackage{listings}
+\lstset{
+  frame=none,
+  xleftmargin=2pt,
+  stepnumber=1,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\ttfamily\tiny\color[gray]{0.3},
+  belowcaptionskip=\bigskipamount,
+  captionpos=b,
+  escapeinside={*'}{'*},
+  language=haskell,
+  tabsize=2,
+  emphstyle={\bf},
+  commentstyle=\it,
+  stringstyle=\mdseries\rmfamily,
+  showspaces=false,
+  keywordstyle=\bfseries\rmfamily,
+  columns=flexible,
+  basicstyle=\small\sffamily,
+  showstringspaces=false,
+  morecomment=[l]\%,
+}
+
 \def\code#1{\texttt{#1}}
 
 \definecolor{darkgreen}{RGB}{0, 100, 0}
@@ -84,7 +108,7 @@
 \begin{frame}%[plain]
     \maketitle
     \centering
- %\includegraphics[scale=0.15]{bilder/hsh-logo.jpg}[h]
+   \includegraphics[scale=0.15]{bilder/hsh-logo.jpg}[h]
    \date{09.12.2024}
 
 \end{frame}
@@ -107,14 +131,40 @@
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Weise Worte:}
+\begin{itemize}
+\item \textmd{"The proper use of comments is to compensate for our failure to express ourselves in code." (Robert C. Martin, Functional Programming in Java, Vorwort)}
+\item \textmd{"In programming the hard part isn’t solving problems, but deciding what problems to solve." (Paul Graham, Functional Programming in Java, Vorwort)}
+\item \textmd{"Testing by itself does not improve software quality. Test results are an indicator of quality, but
+in and of themselves, they don’t improve it. Trying to improve software quality by increasing
+the amount of testing is like trying to lose weight by weighing yourself more often." (Steve McConnell, Functional Programming in Java, Vorwort)}
+\end{itemize}
+\end{frame}
+
 \section{Herkunft der Funktionalen Programmierung}
 \begin{frame}
 	\begin{itemize}
 		\item Lambda Kalkül (1930): Alonzo Church (14.06.1903 - 11.08.1995)
 		\item Vor Maschinen, die solchen Code ausführen konnten, gab es bereits Ansätze dazu.
-            \item Typen Theorie
+        \item Mathematische Themen gebiete: 
+        \begin{itemize}
+        	\item Typen Theorie
+        	\item Kategorie Theorie
+        \end{itemize} 
 	\end{itemize}
 \end{frame}
+
+
+\section{Herkunft der Funktionalen Programmierung}
+\begin{frame}
+\frame{ Typen Theorie}
+\end{frame}
+
+\begin{frame}
+	\frame{Kategorie Theorie}
+	
+	\end{frame}
 
 \section{Programmier Paradigmen}
 \begin{frame}
@@ -131,13 +181,22 @@
     \centering
     \includegraphics[scale=0.38]{bilder/Unterschiede.drawio.png}
 \end{figure}
+\end{frame}
 
+\begin{frame}
+\begin{figure}
+    \begin{itemize}
+    \item \textmd{" Object oriented programming makes code understandable by encapsulating moving parts.
+Functional programming makes code understandable by minimizing moving parts." (Michael Feathers, Functional Programming in Java, Vorwort)}
+    \end{itemize}
+\end{figure}
 \end{frame}
 
 \begin{frame}{Deklaritive und Imperativen Programmiereung}
 \centering
-\includegraphics[scale=0.38]{bilder/ProgrammierParadigmen.drawio.png}
-\textmd{Thanh Viet Nguyen CCBYSA 4.0}
+\includegraphics[scale=0.38]{bilder/ProgrammierParadigmen.drawio.png} 
+\\
+\textmd{\tiny Thanh Viet Nguyen CCBYSA 4.0}
 \end{frame}
 
 \begin{frame}
@@ -147,29 +206,16 @@
 \end{frame}
 
 \begin{frame}
-	\begin{itemize}
- %alonzo church
-	    \item Formales System in der Mathematik für Aussagen bearbeitung
-            \item
-	\end{itemize}
-	%$"quadrat_summe"(x_y) = x^2 + y^2$ akk
-\end{frame}
-
-\begin{frame}
 	\section{Historie}
 \frametitle{Lisp Maschinen}
 	\begin{itemize}
             \item 1960er
-            \item Zweck rforschung von Künstlicher Intelligenz
-            \includegraphics[scale=0.1]{bilder/lispm.jpg}
+            \item Erforschung Künstlicher Intelligenz
+            \includegraphics[scale=0.3]{bilder/lispm.jpg}
             \includegraphics[scale=0.1]{bilder/lispm1.jpg}
             \includegraphics[scale=0.1]{bilder/symblics.jpeg}
 	\end{itemize}
 
-\end{frame}
-
-\begin{frame}
-	content...
 \end{frame}
 
 \begin{frame}
@@ -231,15 +277,15 @@
 
 \begin{frame}{Currying}
 
- \begin{figure}
-     \centering
-     \includegraphics[scale=0.5]{bilder/FP-Curry-hs.png}
- \end{figure}
- \begin{figure}
-     \centering
-     \includegraphics[scale=0.5]{bilder/FP-Curry-java.png}
- \end{figure}
-
+\lstinputlisting[language=Haskell]{codebsp/Curry.hs}
+%  \begin{figure}
+%      \centering
+%      \includegraphics[scale=0.5]{bilder/FP-Curry-hs.png}
+%  \end{figure}
+%  \begin{figure}
+%      \centering
+%      \includegraphics[scale=0.5]{bilder/FP-Curry-java.png}
+%  \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -368,6 +414,7 @@
 \centering
 \frametitle{Mehr erfahren? \\ Hier sind einige Einsteiger freundliche Projekte}
 \begin{itemize}
+    \item Mehr über Lisp Dialekt: \url{https://docs.racket-lang.org/}
     \item FP für weitere Programmier Sprachen: \url{https://learnfp.org/}
     \item Mehr über Haskell:\url{https://learnyouahaskell.github.io/}
     \item Falls jemand nicht genug hat: \url{https://nixos.org/learn/}
@@ -375,30 +422,36 @@
   (let ((message "Falls jemand immer noch nicht genug hat: \url{https://guix.gnu.org/cookbook/}"))
 (display-message)))}
 
-
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
 	\section{Quellen}
+	\fontsize{8pt}{10pt}
+	\centering
+	\textbf{Literatur}
 	\begin{itemize}
-		\item \url{https://achimjungbham.github.io/pub/papers/lambda-calculus.pdf}
-		\item  \url{https://hackmd.io/@9LWWQ7ZlTjK0WMATI1lXgg/HkDzV88Sp} %{Nixified BBB}
-		\item \url{https://en.wikipedia.org/wiki/Lambda_calculus}
-            \item \url{https://bitsavers.org/pdf/mit/cadr/chinual_6thEd_Jan84/}
-            \item \url{https://www.mdc-berlin.de/research/publications/pigx-reproducible-genomics-analysis-pipelines-gnu-guix}
-	\end{itemize}
- \centering
- \textbf{Literatur}
- \begin{itemize}
-     \item Mathematics
-in Programming (Xinyu Liu)
-\item Functional and
-Logic Programming (Gerhard Goos, Juris Hartmanis)
+    \item Mathematics in Programming (Xinyu Liu)
+\item Functional and Logic Programming (Gerhard Goos, Juris Hartmanis)
 \item $\text{Revised}^6$ Report on the Algorithmic Language
-Scheme ()
+Scheme (Robert Bruce Findler, Jacob Matthews)
+\item Functional Programming in Java (Pierre-Yves Saumont)
+\item The Design and Implemention of Programming Languages (John Hughes)
+% THE DE:SIGN AND IMPLEMENTAnONOF PROGRAMMING LANGUAGES
+\item A short introduction to the Lambda Calculus (Achim Jung)
+% https://ia903209.us.archive.org/12/items/working-effectively-with-legacy-code/Working.Effectively.with.Legacy.Code.pdf
  \end{itemize}
+ \textbf{Weblinks}
+	\begin{itemize}
+		%\item \url{https://achimjungbham.github.io/pub/papers/lambda-calculus.pdf}
+        \item \url{https://bitsavers.org/pdf/mit/cadr/chinual_6thEd_Jan84/}
+        \item \url{https://www.mdc-berlin.de/research/publications/pigx-reproducible-genomics-analysis-pipelines-gnu-guix}
+        \item \url{https://docs.racket-lang.org/}
+        \item \url{https://learnyouahaskell.github.io/}
+        \item \url{https://rand.cs.uchicago.edu/cufp_2015/}
+	\end{itemize}
+ 
 \end{frame}
 
 
