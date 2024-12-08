@@ -4,3 +4,8 @@
 *main.toc*
 *main.snm*
 *.class*
+*.glob*
+*.vo*
+*vok*
+*.vos*
+*.aux*
