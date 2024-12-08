@@ -13,5 +13,5 @@ nix develop
 - https://coq.vercel.app/scratchpad.html
 - https://live.lean-lang.org/
 
-### Mehr über Rekersion
+### Mehr über Rekursion
 - https://github.com/SpiXFamily/Rekursion-MLL
