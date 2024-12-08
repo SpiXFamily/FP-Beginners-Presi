@@ -3,6 +3,7 @@
 Empfohlen für Anfänger die schon etwas programmiert haben.
 
 ### Lokaleumgebungen
+Falls ihr noch kein Nix habt: https://nixos.org/learn/
 ```
 nix develop
 ```
