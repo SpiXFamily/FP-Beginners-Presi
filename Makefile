@@ -1,10 +1,11 @@
-all: main.pdf #qa-main.pdf
+OUTPUT = main.pdf
+SOURCE = main.tex
+LOG_DIR = ./logs
 
-main.pdf: main.tex
-	pdflatex -output-directory=./build/ main.tex
-#qa-main.pdf: qa-main.tex
-#	pdflatex -output-directory=./build/ qa-main.tex
+$(OUTPUT): $(SOURCE)
+	mkdir -p $(LOG_DIR)
+	pdflatex -output-directory=$(LOG_DIR) $(SOURCE)
+	mv $(LOG_DIR)/$(OUTPUT) .
 
 clean:
-	rm -f main.aux main.log main.pdf
-
+	rm -f $(LOG_DIR)/*.pdf $(LOG_DIR)/*.log $(LOG_DIR)/*.aux $(OUTPUT)
