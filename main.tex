@@ -68,6 +68,23 @@
   showstringspaces=false,
   morecomment=[l]\%,
 }
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{darkgreen},
+	stringstyle=\color{red},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
 
 \def\code#1{\texttt{#1}}
 
@@ -142,8 +159,9 @@ the amount of testing is like trying to lose weight by weighing yourself more of
 \end{itemize}
 \end{frame}
 
-\section{Herkunft der Funktionalen Programmierung}
+
 \begin{frame}
+	\section{Herkunft der Funktionalen Programmierung}
 	\begin{itemize}
 		\item Lambda Kalkül (1930): Alonzo Church (14.06.1903 - 11.08.1995)
 		\item Vor Maschinen, die solchen Code ausführen konnten, gab es bereits Ansätze dazu.
@@ -155,15 +173,29 @@ the amount of testing is like trying to lose weight by weighing yourself more of
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Lambda Kalkül }
+		\begin{itemize}
+				\item kleinste Universelle Programmiersprache, die keine Machine benötigt
+		\end{itemize}
+	\begin{align*}
+		\langle \text{expression} \rangle & := \langle \text{name} \rangle \mid \langle \text{function} \rangle \mid \langle \text{application} \rangle \\
+		\langle \text{function} \rangle & := \lambda \langle \text{name} \rangle . \langle \text{expression} \rangle \\
+		\langle \text{application} \rangle & := \langle \text{expression} \rangle \langle \text{expression} \rangle
+	\end{align*}
+	\end{frame}
 
-\section{Herkunft der Funktionalen Programmierung}
-\begin{frame}
-\frame{ Typen Theorie}
+\begin{frame}{ Typen Theorie}
+ \textmd{Formales System zur Klassifizierung von Objekten in verschiedene Typen, um Paradoxien zu vermeiden, mit einer hierarchischen Struktur, die Typen als Objekte betrachtet, und Anwendungen in der formalen Verifikation, Logik und Grundlagenforschung; oft konstruktivistisch und eng mit intuitionistischer Logik verbunden.}
+\begin{itemize}
+\item Werte durch Typen klassifiziert, die definieren, welche Art von Daten ein Wert repräsentieren kann.
+\item Statische Typisierung: Typen werden zur Compile-Zeit überprüft, was bedeutet, dass viele Fehler frühzeitig erkannt werden können.
+\item: Dynamische Typisierung: Typen werden zur Laufzeit überprüft, was mehr Flexibilität bietet, aber auch zu Laufzeitfehlern führen kann. 
+\end{itemize}
+
 \end{frame}
 
-\begin{frame}
-	\frame{Kategorie Theorie}
-	
+\begin{frame}{Kategorie Theorie}
+\textmd{Konzept, das Strukturen und Beziehungen zwischen ihnen durch Objekte und Morphismen beschreibt, um verschiedene mathematische Disziplinen zu vereinheitlichen und zu analysieren, wobei zentrale Begriffe wie Funktoren, natürliche Transformationen und Kategorien verwendet werden.}
 	\end{frame}
 
 \section{Programmier Paradigmen}
@@ -186,8 +218,8 @@ the amount of testing is like trying to lose weight by weighing yourself more of
 \begin{frame}
 \begin{figure}
     \begin{itemize}
-    \item \textmd{" Object oriented programming makes code understandable by encapsulating moving parts.
-Functional programming makes code understandable by minimizing moving parts." (Michael Feathers, Functional Programming in Java, Vorwort)}
+    \item \textmd{'' Object oriented programming makes code understandable by encapsulating moving parts.
+Functional programming makes code understandable by minimizing moving parts.'' (Michael Feathers, Functional Programming in Java, Vorwort)}
     \end{itemize}
 \end{figure}
 \end{frame}
@@ -210,12 +242,20 @@ Functional programming makes code understandable by minimizing moving parts." (M
 \frametitle{Lisp Maschinen}
 	\begin{itemize}
             \item 1960er
+            \item Hoffnung an Digitales Computing für Mathematischeproblemlösungen 
             \item Erforschung Künstlicher Intelligenz
-            \includegraphics[scale=0.3]{bilder/lispm.jpg}
-            \includegraphics[scale=0.1]{bilder/lispm1.jpg}
-            \includegraphics[scale=0.1]{bilder/symblics.jpeg}
 	\end{itemize}
+	    \includegraphics[scale=0.1]{bilder/lispm.jpg}
+	\includegraphics[scale=0.1]{bilder/lispm1.jpg}
+	\includegraphics[scale=0.1]{bilder/symblics.jpeg}
+	\includegraphics[scale=0.1]{bilder/space.jpg}
+	\textmd{\url{https://en.wikipedia.org/wiki/Space-cadet_keyboard} \\ \url{https://en.wikipedia.org/wiki/Lisp_machine} }	
+\end{frame}
 
+\begin{frame}
+		\includegraphics[scale=0.1]{bilder/lisp.png}
+	   \lstinputlisting[basicstyle=\ttfamily,columns=fullflexible,language=Lisp]{codebsp/hi.lisp}
+	\textmd{\url{https://en.wikipedia.org/wiki/Lisp_(programming_language)}}
 \end{frame}
 
 \begin{frame}
@@ -223,13 +263,12 @@ Functional programming makes code understandable by minimizing moving parts." (M
 	\begin{figure}
 	    \centering
 	    \includegraphics[width=0.7\linewidth]{bilder/lisphis.png}
+
             \textmd{ \tiny \url{https://en.wikipedia.org/wiki/Lisp_(programming_language)}}
 	    %\caption{Enter Caption}
 	    %\label{fig:enter-label}
 	\end{figure}
 \end{frame}
-
-
 
 \begin{frame}
 	\begin{figure}
@@ -241,7 +280,6 @@ Functional programming makes code understandable by minimizing moving parts." (M
 	\end{figure}
 \end{frame}
 
-
 \section{Features der Funktionalen Programmierung}
 \begin{frame}
 	\begin{itemize}
@@ -252,82 +290,39 @@ Functional programming makes code understandable by minimizing moving parts." (M
 	\end{itemize}
 \end{frame}
 
-
 \begin{frame}
-\frametitle{Zusätzliche Konzepte }
+\frametitle{Konzepte  von FP part 1/2} 
 	\begin{itemize}
+		\item Höhere Geordnete Funktionen: Rufen andere Funktionen als Argumente zu übergeben oder als Ergebnisse zurückzugeben.
 			\item Currying: Umwandlung von Funktionen, die mehrere Argumente annehmen, in eine Kette von Funktionen, die jeweils ein Argument akzeptieren.
+			%	\item Isomorphismen: Bijektive Abbildungen zwischen Funktoren, die die Struktur vollständig bewahren und einen Informationsverlust ausschließen.
+			%\item  Homomorphismen: Funktionen, die die Struktur zwischen Funktoren respektieren, aber nicht notwendigerweise bijektiv sind.
 			\item Functor: \begin{itemize}
-			    \item Functor: Beschreibt, wie Funktionen mit "fmap",  auf Werte in einem bestimmten Zusammenhang angewendet werden.
+			    \item Functor: Funktion mit mehreren Argumenten in eine Kette von Funktionen umgewandelt wird, die jeweils ein Argument akzeptieren, was die teilweise Anwendung von Argumenten ermöglicht.
                     \item  Befolgt Identitätsregel und Kompositionsregel.
 			\end{itemize}
-                \item Applificat: \begin{itemize}
-                    \item Verwendet die Funktionen   "pure" oder "return", um Werte in den Kontext zu bringen
-                    \item Nutzt den Operator ">>=" , um Berechnungen zu verknüpfen
-                    \item Befolgt Identitäts- und Assoziativitätsregeln.
-                \end{itemize}
-                \item Monad: \begin{itemize}
-                    \item Verknüpft Berechnungen in einem Kontext.
-                    \item Definiert durch "return" oder "pure" und ">>=" (Bind).
-                    \item Befolgt Identitätsregel und Assoziativitätsregel.
-                \end{itemize}
 	\end{itemize}
-
-\end{frame}
-
-\begin{frame}{Currying}
-
-\lstinputlisting[language=Haskell]{codebsp/Curry.hs}
-%  \begin{figure}
-%      \centering
-%      \includegraphics[scale=0.5]{bilder/FP-Curry-hs.png}
-%  \end{figure}
-%  \begin{figure}
-%      \centering
-%      \includegraphics[scale=0.5]{bilder/FP-Curry-java.png}
-%  \end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Functor}
-
- \begin{figure}
-     \centering
-     \includegraphics[scale=0.5]{bilder/FP-Functor-hs.png}
- \end{figure}
- \begin{figure}
-     \centering
-     \includegraphics[scale=0.5]{bilder/FP-Functor-java.png}
- \end{figure}
-
+\frametitle{Konzepte  von FP part 2/2} 
+	\begin{itemize}
+	    \item Applificat: 
+	\begin{itemize}
+		\item Verwendet Funktionen   '' pure\ '' oder  ''return '', um Werte in den Kontext zu bringen
+		\item Nutzt den Operator \">>=\" , um Berechnungen zu verknüpfen
+		\item Befolgt Identitäts- und Assoziativitätsregeln.
+		\item Heißt Applikation in der Mathematik:  Anwendung einer Funktion auf ihre Argumente, wobei das Ergebnis der Funktion zurückgegeben wird. 
+	\end{itemize}
+	\item Monad: \begin{itemize}
+		\item Abstraktion um mit Effekten wie Zustandsänderungen, Ein- und Ausgabe oder Fehlern umzugehen 
+		\item ermöglicht  Berechnungen in einer sequenziellen und strukturierten Weise zu kombinieren, indem sie Werte in einem Kontext kapseln und eine einheitliche Schnittstelle für die Verarbeitung dieser Werte bereitstellen. 
+		%\item Verknüpft Berechnungen in einem Kontext.
+		% \item Definiert durch "return" oder "pure" und ">>=" (Bind).
+		\item Befolgt Identitätsregel und Assoziativitätsregel.
+	\end{itemize}
+	\end{itemize}
 \end{frame}
-
-\begin{frame}
-\frametitle{Applicative}
- \begin{figure}
-     \centering
-     \includegraphics[scale=0.5]{bilder/FP-Applicative-hs.png}
- \end{figure}
- \begin{figure}
-     \centering
-     \includegraphics[scale=0.5]{bilder/FP-Applicative-java.png}
- \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Monad}
-
-  \begin{figure}
-     \centering
-     \includegraphics[scale=0.5]{bilder/FP-Monad-hs.png}
- \end{figure}
- \begin{figure}
-     \centering
-     \includegraphics[scale=0.5]{bilder/FP-Monad-java.png}
- \end{figure}
-
-\end{frame}
-
 
 \section{Vorteile und Nachteile}
 \begin{frame}
@@ -359,6 +354,7 @@ Functional programming makes code understandable by minimizing moving parts." (M
             \end{itemize}
 		\item Systemkonfigurationen
 		\item Beweisasistent für Mathematische Theoreme
+		 \item Automatische Beweisführung
             \item Verarbeitung von Forschungsdaten
     \end{itemize}
 \end{frame}
@@ -400,13 +396,11 @@ Functional programming makes code understandable by minimizing moving parts." (M
 	\begin{itemize}
 		\item Grundverständnis zur Funktionalen Programmiereung
 		\item Lambda Kalkulus etwas kennen gelernt
+		\item Einige frühere pur funktionale Programmiersprachen beinflussten moderne nicht pur funktionale Programiersprachen.
 		\item Schwächen und Stärken der Funktionalen Programmierung
          \item Anwendungsgebiete die von FP geführt werden
          \item Wird in der Zukunft häufiger verwendet durch Entwickeln mit KI und Quantencomputer
          \item FP ist nicht die Lösung für alle Probleme in der Softwareentwicklung.
-            %\item \textmd{$\neg \forall x \, (\text{Lösung}(x) \rightarrow \text{funktionale Programmierung}(x)) \land \exists y \, (\text{optimale Lösung}(y) \land \text{Problem}(y) \land \text{funktionale Programmierung}(y))$}
-            %\item $\neg \forall \times ( Lösung(x) \rightarrow y(\text{FunktionaleProgrammierung}(x)) \and \exists y(\text{OpitimaleLösung}(y)) \and \text{Problem}(y) \and \text{FunktionaleProgrammierung}(y)) $ .
-
         \end{itemize}
 \end{frame}
 
@@ -415,8 +409,8 @@ Functional programming makes code understandable by minimizing moving parts." (M
 \frametitle{Mehr erfahren? \\ Hier sind einige Einsteiger freundliche Projekte}
 \begin{itemize}
     \item Mehr über Lisp Dialekt: \url{https://docs.racket-lang.org/}
-    \item FP für weitere Programmier Sprachen: \url{https://learnfp.org/}
     \item Mehr über Haskell:\url{https://learnyouahaskell.github.io/}
+     \item FP für weitere Programmier Sprachen: \url{https://learnfp.org/}
     \item Falls jemand nicht genug hat: \url{https://nixos.org/learn/}
     \item \code{(defun display-message () \\
   (let ((message "Falls jemand immer noch nicht genug hat: \url{https://guix.gnu.org/cookbook/}"))
@@ -440,6 +434,10 @@ Scheme (Robert Bruce Findler, Jacob Matthews)
 \item The Design and Implemention of Programming Languages (John Hughes)
 % THE DE:SIGN AND IMPLEMENTAnONOF PROGRAMMING LANGUAGES
 \item A short introduction to the Lambda Calculus (Achim Jung)
+\item Lambda Calculus (Tobias Nipkow) 
+\item   Functional Programming with Overloading and
+Higher-Order Polymorphism (Mark P. Jones)
+\item A Tutorial Introduction to the Lambda Calculus (Raúl Rojas)
 % https://ia903209.us.archive.org/12/items/working-effectively-with-legacy-code/Working.Effectively.with.Legacy.Code.pdf
  \end{itemize}
  \textbf{Weblinks}
