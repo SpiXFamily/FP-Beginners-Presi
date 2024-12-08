@@ -1,5 +1,5 @@
 {
-  description = "Flake für Racket, Haskell und Java";
+  description = "Flake für Entwicklungsumgebung";
 
   inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
 
