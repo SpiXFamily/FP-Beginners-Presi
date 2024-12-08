@@ -1,0 +1,46 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="1392" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="310" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="500" y="330" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-10" value="Imperative Programmierung" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="120" width="320" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-11" value="Nehme Hammer und Nagel. Gehe 2m zur seite. Nehme das Holz. Tuhe Nagel auf das Holz. Schlage nagel auf das Holz mit den Hammer..." style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" parent="vjsUgd1pbUEOTmnFiNiq-10" vertex="1">
+          <mxGeometry x="30" y="40" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-4" value="Compiler/Interpreter" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="vjsUgd1pbUEOTmnFiNiq-10" vertex="1">
+          <mxGeometry x="180" y="190" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-17" value="" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" parent="vjsUgd1pbUEOTmnFiNiq-10" vertex="1">
+          <mxGeometry x="200" y="60" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="WAOULKOz9AEQnTHbhsb6-1" value="Folgt&amp;nbsp; die Instruktionen" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="vjsUgd1pbUEOTmnFiNiq-10" vertex="1">
+          <mxGeometry x="215" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-12" value="Deklarative Programmierung" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="120" width="320" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-13" value="Baue mir ein Vogelhaus. HIer hast du die Werkzeige Hammer und Nagel. und als Bau baterial Holz. Hier gebe ich dir das Ergbnis wi es aussehen soll." style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" parent="vjsUgd1pbUEOTmnFiNiq-12" vertex="1">
+          <mxGeometry x="30" y="40" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-14" value="Compiler/Interpreter" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="vjsUgd1pbUEOTmnFiNiq-12" vertex="1">
+          <mxGeometry x="170" y="210" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vjsUgd1pbUEOTmnFiNiq-19" value="Baut nach&lt;div&gt;Planung&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.cloud_callout" parent="vjsUgd1pbUEOTmnFiNiq-12" vertex="1">
+          <mxGeometry x="190" y="80" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="MnPTTt8UfFgq5nqq0Voa-1" value="Thanh Viet Nguyen CCBYSA 4.0" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="520" width="190" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -163,7 +163,7 @@ the amount of testing is like trying to lose weight by weighing yourself more of
 \begin{frame}
 	\section{Herkunft der Funktionalen Programmierung}
 	\begin{itemize}
-		\item Lambda Kalkül (1930): Alonzo Church (14.06.1903 - 11.08.1995)
+		\item Lambda Kalkül (1930):  Alonzo Church (14.06.1903 - 11.08.1995)
 		\item Vor Maschinen, die solchen Code ausführen konnten, gab es bereits Ansätze dazu.
         \item Mathematische Themen gebiete: 
         \begin{itemize}
@@ -211,7 +211,7 @@ the amount of testing is like trying to lose weight by weighing yourself more of
 \begin{frame}{Objekt Orientierung und Funktionale Programmierung}
 \begin{figure}
     \centering
-    \includegraphics[scale=0.38]{bilder/Unterschiede.drawio.png}
+    \includegraphics[scale=0.38]{bilder/FPundOOP.drawio.png}
 \end{figure}
 \end{frame}
 
@@ -219,14 +219,15 @@ the amount of testing is like trying to lose weight by weighing yourself more of
 \begin{figure}
     \begin{itemize}
     \item \textmd{'' Object oriented programming makes code understandable by encapsulating moving parts.
-Functional programming makes code understandable by minimizing moving parts.'' (Michael Feathers, Functional Programming in Java, Vorwort)}
+Functional programming makes code understandable by minimizing moving parts.''  \\ 
+(Michael Feathers, Functional Programming in Java, Vorwort)}
     \end{itemize}
 \end{figure}
 \end{frame}
 
 \begin{frame}{Deklaritive und Imperativen Programmiereung}
 \centering
-\includegraphics[scale=0.38]{bilder/ProgrammierParadigmen.drawio.png} 
+\includegraphics[scale=0.38]{bilder/minicom.drawio.png} 
 \\
 \textmd{\tiny Thanh Viet Nguyen CCBYSA 4.0}
 \end{frame}
@@ -254,7 +255,7 @@ Functional programming makes code understandable by minimizing moving parts.'' (
 
 \begin{frame}
 		\includegraphics[scale=0.1]{bilder/lisp.png}
-	   \lstinputlisting[basicstyle=\ttfamily,columns=fullflexible,language=Lisp]{codebsp/hi.lisp}
+	   \lstinputlisting[basicstyle=\ttfamily,columns=fullflexible,language=Lisp]{codeBeispiel1/hi.lisp}
 	\textmd{\url{https://en.wikipedia.org/wiki/Lisp_(programming_language)}}
 \end{frame}
 
@@ -323,6 +324,17 @@ Functional programming makes code understandable by minimizing moving parts.'' (
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\centering
+\includegraphics[scale=0.3]{bilder/monad000.png}
+\textmd{\tiny \url{https://yabai.tw/category/monad/overview/}}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\includegraphics[scale=0.8]{bilder/functors.drawio.png}
+\end{frame}
+
 \section{Vorteile und Nachteile}
 \begin{frame}
 \centering
@@ -330,14 +342,14 @@ Functional programming makes code understandable by minimizing moving parts.'' (
 		\hline
              \textcolor{darkgreen}{Vorteile} & \textcolor{red}{Nachteile} \\
 		\hline
-		Mehr Sicherheit beim Entwickeln: Nebenläufigkeit, Wartbarkeit, und Testbarkeit & Kein Zustand -> Keine Zustandskontrolle \\
-            \hline
-            Modularität & \\
-            Paralelle Verarbeitung& \\
+		Mehr Sicherheit beim Entwickeln: Nebenläufigkeit, Wartbarkeit, und Testbarkeit & in  der Regel keine Zustandskontrolle \\
+            \hline 
+            Paralelle Verarbeitung&  meist Speicher intensiver bei der Laufzeit  \\ 
 		\hline
-            Mehr Speichersicherheit  & meist Speicher intensiver bei der Laufzeit  \\
-		\hline
-    Code ist in der Regel lesbarer und Kürzer & Lesbarkeit $\neq$ Verständlich \\
+    Code ist in der Regel lesbarer  & Lesbarkeit $\neq$ Verständlich \\
+    \hline
+    Modularität & \\ 
+      \hline 
             Höhere Abstraktion & \\
 		\hline
 
@@ -347,24 +359,15 @@ Functional programming makes code understandable by minimizing moving parts.'' (
 \section{Anwendungsgebiete}
 \begin{frame}
 	\begin{itemize}
-            \item Software Anwendungen (Webanwendung, Desktopanwendungen, Services, etc.)
-            \begin{itemize}
-            \item  Sicherstellung von Software
-            \end{itemize}
-		\item Systemkonfigurationen
-		\item Beweisasistent für Mathematische Theoreme
-		 \item Automatische Beweisführung
-            \item Verarbeitung von Forschungsdaten
+            \item Software Anwendungen 
+            \item Systemkonfigurationen 
+		\item Beweisasistent für Mathematische Theoreme sowie Automatische Beweisführung
+		\begin{itemize}
+			\item  Roqc \text{für Lisp Dialekt Liebhaber}
+			\item  Lean \text{für nicht Lisp Dialekt Liebhaber}
+		\end{itemize}
+            \item Verarbeitung von Daten
     \end{itemize}
-\end{frame}
-
-\begin{frame}{Beweisassistent für Theoreme}
-\centering
-    \begin{itemize}
-        \item  Roqc \text{für Lisp Dialekt Liebhaber}
-        \item  Lean \text{für nicht Lisp Dialekt Liebhaber}
-    \end{itemize}
-
 \end{frame}
 
 \begin{frame}
@@ -372,9 +375,9 @@ Functional programming makes code understandable by minimizing moving parts.'' (
  \begin{itemize}
 		\item NixOS: GNU/Linux Distro
 		\item Guix: GNU/Linux Distro, welches mit Guile Scheme Dialekt Konfiguriert wird
+		\item Code als Basis für Infrastrukturen
 		\item Emacs: Ein Texteditor mit vielen erweiterungen, welches mit Lisp Dialekt (Elisp)
 		\item Debian GNU/Linux verwendung von OCAML für Reproduzierbare Checks
-        \item Code als Basis für Infrastrukturen
 \end{itemize}
 
 \end{frame}
@@ -443,6 +446,7 @@ Higher-Order Polymorphism (Mark P. Jones)
  \textbf{Weblinks}
 	\begin{itemize}
 		%\item \url{https://achimjungbham.github.io/pub/papers/lambda-calculus.pdf}
+		\item \url{https://yabai.tw/category/monad/overview/}
         \item \url{https://bitsavers.org/pdf/mit/cadr/chinual_6thEd_Jan84/}
         \item \url{https://www.mdc-berlin.de/research/publications/pigx-reproducible-genomics-analysis-pipelines-gnu-guix}
         \item \url{https://docs.racket-lang.org/}
