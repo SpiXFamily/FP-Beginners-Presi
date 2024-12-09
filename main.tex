@@ -175,6 +175,7 @@ the amount of testing is like trying to lose weight by weighing yourself more of
 \begin{frame}{Lambda Kalkül }
 		\begin{itemize}
 				\item kleinste Universelle Programmiersprache, die keine Machine benötigt
+				\item Turing-Vollständigkeit: Fähigkeit eines Berechnungssystems, jede berechenbare Funktion auszuführen, die eine Turing-Maschine ausführen kann, und ist ein Maß für die Ausdruckskraft von Programmiersprachen und anderen Berechnungssystemen.
 		\end{itemize}
 	\begin{align*}
 		\langle \text{expression} \rangle & := \langle \text{name} \rangle \mid \langle \text{function} \rangle \mid \langle \text{application} \rangle \\
@@ -184,18 +185,25 @@ the amount of testing is like trying to lose weight by weighing yourself more of
 	\end{frame}
 
 \begin{frame}{ Typen Theorie}
- \textmd{Formales System zur Klassifizierung von Objekten in verschiedene Typen, um Paradoxien zu vermeiden, mit einer hierarchischen Struktur, die Typen als Objekte betrachtet, und Anwendungen in der formalen Verifikation, Logik und Grundlagenforschung; oft konstruktivistisch und eng mit intuitionistischer Logik verbunden.}
+ \textmd{Formales System zur Typklassifizierung zur Vermeidung von Wiedersprüchen, hierarchisch strukturiert, mit Anwendungen in Verifikation, Logik und Grundlagenforschung; konstruktivistisch und mit intuitionistischer Logik verbunden.}
 \begin{itemize}
 \item Werte durch Typen klassifiziert, die definieren, welche Art von Daten ein Wert repräsentieren kann.
 \item Statische Typisierung: Typen werden zur Compile-Zeit überprüft, was bedeutet, dass viele Fehler frühzeitig erkannt werden können.
-\item: Dynamische Typisierung: Typen werden zur Laufzeit überprüft, was mehr Flexibilität bietet, aber auch zu Laufzeitfehlern führen kann. 
+\item Dynamische Typisierung: Typen werden zur Laufzeit überprüft, was mehr Flexibilität bietet, aber auch zu Laufzeitfehlern führen kann. 
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}{Kategorie Theorie}
-\textmd{Konzept, das Strukturen und Beziehungen zwischen ihnen durch Objekte und Morphismen beschreibt, um verschiedene mathematische Disziplinen zu vereinheitlichen und zu analysieren, wobei zentrale Begriffe wie Funktoren, natürliche Transformationen und Kategorien verwendet werden.}
-	\end{frame}
+	\begin{itemize}
+\item Kategorien: Objekte (Typen) und Morphismen (Funktionen).
+\item Funktoren: Abbildungen zwischen Kategorien, die Struktur bewahren.
+\item Monaden: Spezielle Funktoren für Nebenwirkungen und sequentielle Berechnungen.
+\item Natürliche Transformationen: Verbindung zwischen zwei Funktoren.
+\item Typklassen: Polymorphe Programmierung, inspiriert von Kategorien.
+\item Algebraische Datentypen: Datentypen als Objekte in der Kategorientheorie.
+\end{itemize}
+\end{frame}
 
 \section{Programmier Paradigmen}
 \begin{frame}
@@ -281,9 +289,11 @@ Functional programming makes code understandable by minimizing moving parts.''  
 \section{Features der Funktionalen Programmierung}
 \begin{frame}
 	\begin{itemize}
-		\item Fokus auf unveränbare Daten
+		\item Purity:  Eine Funktion gibt immer das gleiche Ergebnis für die gleichen Eingaben zurück und verändert keine externen Zustände.
+		\item First-Class-Funktionen: Funktionen können wie Daten behandelt werden, d.h. sie können als Argumente übergeben, zurückgegeben und in Variablen gespeichert werden.
+		\item Unveränderlichkeit: Datenstrukturen sind unveränderlich, d.h , dass sie nicht verändert werden können, nachdem sie erstellt wurden.
             \item Wenn eine Funktion pur ist, folgt: \code{Kein State -> keine Seiteneffekte}
-            \item Basiert sich auf Aussagen
+            \item Basiert sich auf mathematische Aussagen
             \item Rerefrenzen sind Transparent:   \code{input -> output}
 	\end{itemize}
 \end{frame}
@@ -292,14 +302,14 @@ Functional programming makes code understandable by minimizing moving parts.''  
 \frametitle{Konzepte  von FP part 1/2} 
 	\begin{itemize}
 		\item Rekursion:   Funktion, die sich selbst aufruft.
-		\item Höhere Geordnete Funktionen: Rufen andere Funktionen als Argumente zu übergeben oder als Ergebnisse zurückzugeben.
-			\item Currying: Umwandlung von Funktionen, die mehrere Argumente annehmen, in eine Kette von Funktionen, die jeweils ein Argument akzeptieren.
+		 \item Höhere geordnete Funktionen: Rufen andere Funktionen als Argumente zu übergeben oder als Ergebnisse zurückzugeben.
+		\item Currying: Umwandlung von Funktionen, die mehrere Argumente annehmen, in eine Kette von Funktionen, die jeweils ein Argument akzeptieren.
 			%	\item Isomorphismen: Bijektive Abbildungen zwischen Funktoren, die die Struktur vollständig bewahren und einen Informationsverlust ausschließen.
 			%\item  Homomorphismen: Funktionen, die die Struktur zwischen Funktoren respektieren, aber nicht notwendigerweise bijektiv sind.
 			\item Functor: \begin{itemize}
 			    \item Functor: Funktion mit mehreren Argumenten in eine Kette von Funktionen umgewandelt wird, die jeweils ein Argument akzeptieren, was die teilweise Anwendung von Argumenten ermöglicht. 
 			    \item wird über die Funktion ''fmap'' Bereitsgestellt.
-                    \item  Befolgt Identitätsregel und Kompositionsregel.
+                   \item  Befolgt Identitätsregel und Kompositionsregel.
 			\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -436,8 +446,8 @@ Functional programming makes code understandable by minimizing moving parts.''  
 
 \end{frame}
 
-\begin{frame}
 	\section{Quellen}
+\begin{frame}
 	\fontsize{8pt}{10pt}
 	\centering
 	\textbf{Literatur}
@@ -474,6 +484,7 @@ Higher-Order Polymorphism (Mark P. Jones)
 \begin{frame}
  \begin{figure}
     \centering
+    \frametitle{Danke für die Aufmerksamkeit}
     \includegraphics[width=0.5\linewidth]{bilder/git-GI.png}
 \textmd{\url{https://github.com/SpiXFamily/FP-Beginners-Presi}}
 \end{figure}
