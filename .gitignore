@@ -10,3 +10,4 @@
 *.vos*
 *.aux*
 *main.synctex.gz*
+./logs
