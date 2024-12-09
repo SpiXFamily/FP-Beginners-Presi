@@ -11,9 +11,9 @@ nix develop
 - https://miktex.org/
 
 ### Webumgebungen
-- https://coq.vercel.app/scratchpad.html
-- https://live.lean-lang.org/
-
+- Für Rocq: https://coq.vercel.app/scratchpad.html
+- Für Lean: https://live.lean-lang.org/
+- For Common Lisp: https://onecompiler.com/commonlisp
 ### Nutzen von ghci
 innerhalb von ghci:
 ```
