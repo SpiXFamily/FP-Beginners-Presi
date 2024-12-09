@@ -291,12 +291,14 @@ Functional programming makes code understandable by minimizing moving parts.''  
 \begin{frame}
 \frametitle{Konzepte  von FP part 1/2} 
 	\begin{itemize}
+		\item Rekursion:   Funktion, die sich selbst aufruft.
 		\item Höhere Geordnete Funktionen: Rufen andere Funktionen als Argumente zu übergeben oder als Ergebnisse zurückzugeben.
 			\item Currying: Umwandlung von Funktionen, die mehrere Argumente annehmen, in eine Kette von Funktionen, die jeweils ein Argument akzeptieren.
 			%	\item Isomorphismen: Bijektive Abbildungen zwischen Funktoren, die die Struktur vollständig bewahren und einen Informationsverlust ausschließen.
 			%\item  Homomorphismen: Funktionen, die die Struktur zwischen Funktoren respektieren, aber nicht notwendigerweise bijektiv sind.
 			\item Functor: \begin{itemize}
-			    \item Functor: Funktion mit mehreren Argumenten in eine Kette von Funktionen umgewandelt wird, die jeweils ein Argument akzeptieren, was die teilweise Anwendung von Argumenten ermöglicht.
+			    \item Functor: Funktion mit mehreren Argumenten in eine Kette von Funktionen umgewandelt wird, die jeweils ein Argument akzeptieren, was die teilweise Anwendung von Argumenten ermöglicht. 
+			    \item wird über die Funktion ''fmap'' Bereitsgestellt.
                     \item  Befolgt Identitätsregel und Kompositionsregel.
 			\end{itemize}
 	\end{itemize}
@@ -307,14 +309,16 @@ Functional programming makes code understandable by minimizing moving parts.''  
 	\begin{itemize}
 	    \item Applificat: 
 	\begin{itemize}
-		\item Verwendet Funktionen   '' pure\ '' oder  ''return '', um Werte in den Kontext zu bringen
-		\item Nutzt den Operator \">>=\" , um Berechnungen zu verknüpfen
+		\item Erweiterung des Funktors: Funktionen, die in einem Kontext sind, auf Werte in einem anderen Kontext anzuwenden.
+		\item Verwendet Funktionen   '' pure'' oder  ''return'', um Werte in den Kontext zu bringen
+		%\item Nutzt den Operator ''' >>= '' , um Berechnungen zu verknüpfen
 		\item Befolgt Identitäts- und Assoziativitätsregeln.
 		\item Heißt Applikation in der Mathematik:  Anwendung einer Funktion auf ihre Argumente, wobei das Ergebnis der Funktion zurückgegeben wird. 
 	\end{itemize}
 	\item Monad: \begin{itemize}
+		\item  Spezielle art des Funktors: Bietet zusätzlich Möglichkeit, Werte in einem Kontext zu verketten.
 		\item Abstraktion um mit Effekten wie Zustandsänderungen, Ein- und Ausgabe oder Fehlern umzugehen 
-		\item ermöglicht  Berechnungen in einer sequenziellen und strukturierten Weise zu kombinieren, indem sie Werte in einem Kontext kapseln und eine einheitliche Schnittstelle für die Verarbeitung dieser Werte bereitstellen. 
+		%\item ermöglicht  Berechnungen in einer sequenziellen und strukturierten Weise zu kombinieren, indem sie Werte in einem Kontext kapseln und eine einheitliche Schnittstelle für die Verarbeitung dieser Werte bereitstellen. 
 		%\item Verknüpft Berechnungen in einem Kontext.
 		% \item Definiert durch "return" oder "pure" und ">>=" (Bind).
 		\item Befolgt Identitätsregel und Assoziativitätsregel.
@@ -328,30 +332,29 @@ Functional programming makes code understandable by minimizing moving parts.''  
 \textmd{\tiny \url{https://yabai.tw/category/monad/overview/}}
 \end{frame}
 
-\begin{frame}
-	\centering
-	\includegraphics[scale=0.7]{bilder/functors.drawio.png}
-\end{frame}
+%\begin{frame}
+%	\centering
+%	\includegraphics[scale=0.7]{bilder/functors.drawio.png}
+%\end{frame}
 
 \section{Vorteile und Nachteile}
 \begin{frame}
-\centering
-	\begin{tabular}{ |p{5cm}|p{5cm}|  }
+	\centering
+	\begin{tabular}{ |p{5.5cm}|p{5cm}|  }
 		\hline
-             \textcolor{darkgreen}{Vorteile} & \textcolor{red}{Nachteile} \\
+		\textcolor{darkgreen}{Vorteile} & \textcolor{red}{Nachteile} \\
 		\hline
-		Mehr Sicherheit beim Entwickeln: Nebenläufigkeit, Wartbarkeit, und Testbarkeit & in  der Regel keine Zustandskontrolle \\
-            \hline 
-            Paralelle Verarbeitung&  meist Speicher intensiver bei der Laufzeit  \\ 
+		\textmd{Mehr Sicherheit beim Entwickeln: Nebenläufigkeit, Wartbarkeit und Testbarkeit} & \textmd{keine Zustandskontrolle} \\
+		\hline 
+		Parallele Verarbeitung &  meist speicherintensiver bei der Laufzeit  \\ 
 		\hline
-    Code ist in der Regel lesbarer  & Lesbarkeit $\neq$ Verständlich \\
-    \hline
-    Modularität & \\ 
-      \hline 
-            Höhere Abstraktion & \\
+		Code ist in der Regel lesbarer und ordentlicher & Lesbarkeit $\neq$ Verständlichkeit \\
 		\hline
-
- \end{tabular}
+		Modularität & \\ 
+		\hline 
+		Höhere Abstraktion & \\
+		\hline
+	\end{tabular}
 \end{frame}
 
 \section{Anwendungsgebiete}
@@ -371,7 +374,7 @@ Functional programming makes code understandable by minimizing moving parts.''  
 \begin{frame}
 \frametitle{Deklarative Systemkonfigurationen und Reproduzierbare Bauten}
  \begin{itemize}
-		\item NixOS: GNU/Linux Distro
+		\item NixOS: GNU/Linux Distro 
 		\item Guix: GNU/Linux Distro, welches mit Guile Scheme Dialekt Konfiguriert wird
 		\item Code als Basis für Infrastrukturen
 		\item Emacs: Ein Texteditor mit vielen erweiterungen, welches mit Lisp Dialekt (Elisp)
@@ -463,6 +466,7 @@ Higher-Order Polymorphism (Mark P. Jones)
         \item \url{https://docs.racket-lang.org/}
         \item \url{https://learnyouahaskell.github.io/}
         \item \url{https://rand.cs.uchicago.edu/cufp_2015/}
+        \item \url{https://www.adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html}
 	\end{itemize}
  
 \end{frame}
